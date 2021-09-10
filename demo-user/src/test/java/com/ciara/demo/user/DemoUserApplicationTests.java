@@ -1,19 +1,13 @@
 package com.ciara.demo.user;
 
+import org.junit.jupiter.api.Test;
+import org.springframework.boot.test.context.SpringBootTest;
 
-import org.mybatis.spring.annotation.MapperScan;
-import org.springframework.boot.SpringApplication;
-import org.springframework.boot.autoconfigure.SpringBootApplication;
-
-/**
- * 组件扫描
- */
-@SpringBootApplication
-@MapperScan(  {"com.ciara.demo.user.mapper.UserMapper"})
+@SpringBootTest
 class DemoUserApplicationTests {
 
-    public static void main(String[] args){
-        SpringApplication.run(DemoUserApplication.class,args);
+    @Test
+    void contextLoads() {
     }
 
 }
