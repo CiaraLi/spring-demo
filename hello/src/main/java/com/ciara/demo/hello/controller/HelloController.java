@@ -23,11 +23,15 @@ public class HelloController {
     @Autowired
     private Site site;
 
+    @RequestMapping("/")
+    public String index() {
+        return "请访问 /hello "  ;
+    }
     @RequestMapping("/hello")
     public String hello() {
         //读取环境变量
         System.out.println(env.getProperty("env"));
-        return "Hello Spring:" + title;
+        return "Hello Spring :" + title;
     }
 
     //https://www.bilibili.com/video/BV1Lq4y1J77x?p=12&spm_id_from=pageDriver 教学视频
